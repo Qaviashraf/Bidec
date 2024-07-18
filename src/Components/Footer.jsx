@@ -52,7 +52,7 @@ const Footer = () => {
                         <h2>FAQs</h2>
                         <h2>Policies</h2>
                         </div>
-                        <button className='mr-10 my-4 md:my-0 border border-white px-4 py-2 rounded-full hover:bg-gray-200 hover:text-black'>Subscribe Newsletter</button>
+                        <button className='mr-10 my-4 md:my-0 border border-white px-4 py-2 rounded-full hover:bg-gray-200 hover:text-black transition duration-300'>Subscribe Newsletter</button>
                     </div>
                 </div>
             </div>
@@ -62,7 +62,7 @@ const Footer = () => {
                     {buttons.map((title, index) => (
                         <button
                             key={index}
-                            className='mx-4 mb-4 border border-white px-2 py-1 rounded-full hover:bg-gray-200 hover:text-black'
+                            className='mx-4 mb-4 border border-white px-2 py-1 rounded-full hover:bg-gray-200 hover:text-black transition duration-300'
                         >
                             {title}
                         </button>

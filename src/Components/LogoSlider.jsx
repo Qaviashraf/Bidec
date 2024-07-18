@@ -1,4 +1,4 @@
-import HALO from 'vanta/src/vanta.halo'
+
 import React, { useEffect } from 'react'
 
 
@@ -12,20 +12,7 @@ const logos = [
 ];
 
 const LogoSlider = () => {
-  // useEffect(() => {
-  // HALO({
-  //   el: "#vantahalo",
-  //   // mouseControls: true,
-  //   // touchControls: true,
-  //   gyroControls: false,
-  //   minHeight: 150.00,
-  //   minWidth: 300.00,
-  //   baseColor: 0x0,
-  //   backgroundColor: 0x0,
-  //   amplitudeFactor: 0.40,
-  //   size: 1.20
-  // })
-  // }, [])
+
   return (
     <div className="overflow-hidden relative w-screen text-white h-32 mb-4">
       <div className="flex w-[200%] animate-marquee">

@@ -31,7 +31,7 @@ const QuestionAnswers = () => {
   ];
 
   return (
-    <div className='mx-6 lg:mx-24 text-md lg:text-2xl'>
+    <div className='mx-6 lg:mx-24 my-24 text-md lg:text-2xl'>
       {data.map((faq, index) => (
         <div key={index}>
           <div className='flex font-semibold'>

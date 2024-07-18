@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import { motion, useInView, useAnimation } from 'framer-motion';
 
 export const ServicesCard = () => {
     const services = [
@@ -25,33 +26,61 @@ export const ServicesCard = () => {
     return (
         <div className='flex flex-col items-center space-y-8'>
             {services.map((service, index) => (
-                <div key={index} className='flex flex-col md:flex-row justify-center w-fit bg-white text-black px-16 py-20 rounded-br-[100px] rounded-tl-[100px]'>
-                    <div className='w-52 md:w-96 md:mr-12'>
-                        <h1 className='text-3xl md:text-5xl'>{service.title}</h1>
-                        <div className='flex flex-wrap my-4 gap-2'>
-                            {service.keywords.map((keyword, keywordIndex) => (
-                                <button key={keywordIndex} className='py-1 px-2 border border-gray-300 hover:bg-black hover:text-white rounded-2xl'>
-                                    {keyword}
-                                </button>
-                            ))}
-                        </div>
-                        <p>{service.intro}</p>
-                        <button className='my-4 py-1 px-2 border border-black hover:bg-black hover:text-white rounded-2xl'>Find out more</button>
-                    </div>
-                    <div>
-                        <video
-                            src={service.video}
-                            autoPlay
-                            loop
-                            muted
-                            className='w-52 h-52 md:w-96 md:h-96 rounded-tr-[90px] rounded-bl-[90px]'>
-                        </video>
-                    </div>
-                </div>
+                <InViewCard key={index} service={service} />
             ))}
         </div>
     );
 };
 
+const InViewCard = ({ service }) => {
+    const ref = React.useRef(null);
+    const isInView = useInView(ref, { amount: 0.6 });
+    const controls = useAnimation();
 
+    React.useEffect(() => {
+        if (isInView) {
+            controls.start({
+                scale: 1,
+                opacity: 1,
+                transition: { duration: 0.8 }
+            });
+        } else {
+            controls.start({
+                scale: 0.5,
+                opacity: 0,
+                transition: { duration: 0.8 }
+            });
+        }
+    }, [isInView, controls]);
 
+    return (
+        <motion.div
+            ref={ref}
+            className='flex flex-col md:flex-row justify-center md:w-fit bg-white text-black px-16 py-20 rounded-br-[100px] rounded-tl-[100px]'
+            initial={{ scale: 0.5, opacity: 0 }}
+            animate={controls}
+        >
+            <div className='w-62 md:w-96 md:mr-12'>
+                <h1 className='text-3xl md:text-5xl'>{service.title}</h1>
+                <div className='flex flex-wrap my-4 gap-2'>
+                    {service.keywords.map((keyword, keywordIndex) => (
+                        <button key={keywordIndex} className='py-1 px-2 border border-gray-300 hover:bg-black hover:text-white rounded-2xl transition duration-300'>
+                            {keyword}
+                        </button>
+                    ))}
+                </div>
+                <p>{service.intro}</p>
+                <button className='my-4 py-1 px-2 border border-black hover:bg-black hover:text-white rounded-2xl transition duration-300'>Find out more</button>
+            </div>
+            <div>
+                <video
+                    src={service.video}
+                    autoPlay
+                    loop
+                    muted
+                    className='w-52 h-52 md:w-96 md:h-96 rounded-tr-[90px] rounded-bl-[90px]'>
+                </video>
+            </div>
+        </motion.div>
+    );
+};

@@ -37,7 +37,7 @@ const Navbar = () => {
             <Link to="/contactus" onClick={toggleMenu} className="hover:underline">Contact Us</Link>
           </li>
         </ul>
-        <button className="mt-8 border border-black py-2 px-4 rounded-full hover:bg-black hover:text-white transition">
+        <button className="mt-8 border border-black py-2 px-4 rounded-full hover:bg-black hover:text-white transition duration-300">
           Start your project
         </button>
       </div>
