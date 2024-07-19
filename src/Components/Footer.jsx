@@ -22,7 +22,7 @@ const Footer = () => {
     };
 
     return (
-        <div className='bg-[#000000] text-white max-w-screen border-t border-gray-600'>
+        <div className='bg-[#0C1A16] text-white max-w-screen border-t border-gray-600'>
             <div className='flex ml-6'>
                 <div className='py-10 w-screen'>
                     <div className="flex justify-between w-full ">

@@ -17,7 +17,7 @@ import Footer from './Components/Footer'
 function App() {
  
   return (
-    <div className='bg-black'>
+    <div className='bg-gradient-to-r from-[#227C85] to-[#0C1A16] animate-gradientbg'>
       <Router>
         <NavBar />
         <Routes>

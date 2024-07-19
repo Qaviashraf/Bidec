@@ -46,7 +46,7 @@ export const DevloperThings = () => {
           <h1 className='text-lg md:text-xl mx-2'>{item.index}</h1>
           <div className='flex flex-col md:flex-row justify-between my-2 group'>
             <h1 className='text-4xl md:text-9xl opacity-70 group-hover:opacity-100 transition-opacity duration-100'>{item.title}</h1>
-            <p className='w-96 text-xl md:text-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-100'>{item.para}</p>
+            <p className='w-80 lg:w-96 text-xl md:text-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-100'>{item.para}</p>
           </div>
           <hr />
         </div>

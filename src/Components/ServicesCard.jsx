@@ -56,7 +56,7 @@ const InViewCard = ({ service }) => {
     return (
         <motion.div
             ref={ref}
-            className='flex flex-col md:flex-row justify-center md:w-fit bg-white text-black px-16 py-20 rounded-br-[100px] rounded-tl-[100px]'
+            className='flex flex-col md:flex-row justify-center md:w-fit bg-[#0C1A16] text-white px-16 py-20 rounded-tl-[100px] md:rounded-br-[100px] md:rounded-tl-[100px]'
             initial={{ scale: 0.5, opacity: 0 }}
             animate={controls}
         >
@@ -64,13 +64,13 @@ const InViewCard = ({ service }) => {
                 <h1 className='text-3xl md:text-5xl'>{service.title}</h1>
                 <div className='flex flex-wrap my-4 gap-2'>
                     {service.keywords.map((keyword, keywordIndex) => (
-                        <button key={keywordIndex} className='py-1 px-2 border border-gray-300 hover:bg-black hover:text-white rounded-2xl transition duration-300'>
+                        <button key={keywordIndex} className='py-1 px-2 border border-[#1C5F50] hover:bg-[#0D211E] hover:text-white rounded-2xl transition duration-300'>
                             {keyword}
                         </button>
                     ))}
                 </div>
                 <p>{service.intro}</p>
-                <button className='my-4 py-1 px-2 border border-black hover:bg-black hover:text-white rounded-2xl transition duration-300'>Find out more</button>
+                <button className='my-4 py-1 px-2 border border-[#1C5F50] hover:bg-[#0D211E] hover:text-white rounded-2xl transition duration-300'>Find out more</button>
             </div>
             <div>
                 <video
@@ -78,7 +78,7 @@ const InViewCard = ({ service }) => {
                     autoPlay
                     loop
                     muted
-                    className='w-52 h-52 md:w-96 md:h-96 rounded-tr-[90px] rounded-bl-[90px]'>
+                    className='w-62 h-62 md:w-96 md:h-96 rounded-tr-[90px] rounded-bl-[90px]'>
                 </video>
             </div>
         </motion.div>

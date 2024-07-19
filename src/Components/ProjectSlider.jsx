@@ -60,7 +60,7 @@ export const ProjectSlider = () => {
   return (
     <motion.div
       ref={ref}
-      className='relative rounded-3xl bg-white text-black p-6 shadow-lg'
+      className='relative rounded-3xl bg-[#133939] text-white p-6 drop-shadow-2xl	'
       initial={{ opacity: 0, rotateY: 90 }}
       animate={controls}
       transition={{ duration: 0.2 }}
@@ -69,7 +69,7 @@ export const ProjectSlider = () => {
         <h1 className='text-xl font-bold'>
           {currentData.title}
         </h1>
-        <div className='flex justify-center items-center cursor-pointer rounded-bl-3xl rounded-tr-3xl border border-gray-500 bg-black w-12 h-12' onClick={handleNext}>
+        <div className='flex justify-center items-center cursor-pointer rounded-bl-3xl rounded-tr-3xl border border-gray-500 bg-[#0C1A16] hover:bg-transparent w-12 h-12' onClick={handleNext}>
           <FaArrowCircleRight size={"1.5em"} color='white' />
         </div>
       </div>
@@ -83,7 +83,7 @@ export const ProjectSlider = () => {
           <h1 className='text-2xl md:text-6xl font-bold bg-gradient-to-r from-blue-500 via-blue-300 to-red-400 bg-clip-text text-transparent animate-gradient'>
             {currentData.percentage}
           </h1>
-          <h2 className='text-lg md:text-2xl text-gray-600'>{currentData.description}</h2>
+          <h2 className='text-lg md:text-2xl text-gray-400'>{currentData.description}</h2>
         </motion.div>
         <motion.div
           className='w-72 md:w-96'
@@ -95,11 +95,11 @@ export const ProjectSlider = () => {
         </motion.div>
       </div>
       <div className='flex justify-between mt-2'>
-        <div className='flex justify-center items-center cursor-pointer rounded-bl-3xl rounded-tr-3xl border border-gray-500 bg-black w-12 h-12' onClick={handlePrev}>
+        <div className='flex justify-center items-center cursor-pointer rounded-bl-3xl rounded-tr-3xl border border-gray-500 bg-[#0C1A16] hover:bg-transparent w-12 h-12' onClick={handlePrev}>
           <FaArrowCircleLeft size={"1.5em"} color='white' />
         </div>
         <div className='flex justify-center'>
-          <button className='px-4 py-2 rounded-2xl border border-black hover:bg-black text-black hover:text-white transition duration-300'>
+          <button className='px-4 py-2 rounded-2xl border border-white hover:bg-[#0C1A16] text-white hover:text-white transition duration-300'>
             View Project
           </button>
         </div>

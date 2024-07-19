@@ -77,7 +77,7 @@ const Home = () => {
           </div>
         </div>
 
-        {/* Projects Section */}
+        {/* Work Section */}
         <div className='md:mx-16 lg:mx-32 py-10 pb-32'>
           <motion.div
             initial={{ x: '-100vw' }}
@@ -95,7 +95,7 @@ const Home = () => {
           </div>
         </div>
 
-        <div className=''>
+        <div className='max-w-screen py-10 pb-32'>
           <DevloperThings />
         </div>
 
