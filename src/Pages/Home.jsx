@@ -10,6 +10,7 @@ import { ServicesCard } from '../Components/ServicesCard';
 import { ProjectSlider } from '../Components/ProjectSlider';
 import { DevloperThings } from '../Components/DevloperThings';
 import { Articles } from '../Components/Articles';
+import { Work } from './Work';
 
 const Home = () => {
 
@@ -29,7 +30,7 @@ const Home = () => {
 
   return (
     <>
-      <div className='max-w-screen text-white' id='vanta'>
+      <div className='max-w-screen text-white' >
 
         {/* Intro */}
         <div className='mx-12 md:mx-0 py-36'>
@@ -76,6 +77,24 @@ const Home = () => {
           </div>
         </div>
 
+        {/* Projects Section */}
+        <div className='md:mx-16 lg:mx-32 py-10 pb-32'>
+          <motion.div
+            initial={{ x: '-100vw' }}
+            animate={{ x: 0 }}
+            transition={{ duration: 0.5, type: 'spring', stiffness: 120 }}
+          >
+            <h1 className='mx-8 md:mx-16 lg:mx-24 my-4 text-5xl md:text-9xl font-semibold drop-shadow-lg'>Our</h1>
+            <div className='flex'>
+              <h1 className='mx-16 md:mx-36 lg:mx-52 my-6 text-5xl md:text-9xl font-semibold drop-shadow-lg'>Work</h1>
+              <GoArrowDownLeft size={"8rem"} />
+            </div>
+          </motion.div>
+          <div className='flex justify-center mx-4 mt-4 max-w-screen'>
+            <Work />
+          </div>
+        </div>
+
         <div className=''>
           <DevloperThings />
         </div>
@@ -92,14 +111,14 @@ const Home = () => {
           <QuestionAnswers />
         </div>
 
-        {/* FAQ Section */}
+        {/* Articles Section */}
         <div className='max-w-screen py-10 pb-32'>
           <motion.div
             initial={{ x: '-100vw' }}
             animate={{ x: 0 }}
             transition={{ duration: 0.5, type: 'spring', stiffness: 120 }}
           >
-            <h1 className='mx-8 md:mx-16 lg:mx-24 my-4 text-9xl drop-shadow-lg'>Articles</h1>
+            <h1 className='mx-8 md:mx-16 lg:mx-24 my-4 text-5xl md:text-9xl drop-shadow-lg'>Articles</h1>
           </motion.div>
           <Articles />
         </div>

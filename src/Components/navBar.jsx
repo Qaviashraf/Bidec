@@ -31,7 +31,7 @@ const Navbar = () => {
             <Link to="/" onClick={toggleMenu} className="hover:underline">Home</Link>
           </li>
           <li>
-            <Link to="/aboutus" onClick={toggleMenu} className="hover:underline">About Us</Link>
+            <Link to="/services" onClick={toggleMenu} className="hover:underline">Services</Link>
           </li>
           <li>
             <Link to="/contactus" onClick={toggleMenu} className="hover:underline">Contact Us</Link>
