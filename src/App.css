@@ -50,6 +50,10 @@
   animation: gradient 4s ease infinite;
 }
 
+.animate-gradientbg {
+  background-size: 200% 200%;
+  animation: gradient 7s ease infinite;
+}
 
 
 /* #root {
